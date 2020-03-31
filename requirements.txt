@@ -3,7 +3,7 @@ anytree==2.8.0
 apple-calendar-integration==0.0.1
 bcrypt==3.1.6
 beautifulsoup4==4.7.1
-bleach==3.1.0
+bleach==3.1.4
 blinker==1.4
 Bootstrap-Flask==1.0.10
 boto3==1.11.13

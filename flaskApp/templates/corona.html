@@ -1,10 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+     <link rel="stylesheet" href="{{ url_for('static',filename='stylesheet.css') }}">
+
+</head>
+
+<body>
+<div class="row" style="display: flex">
+    <div class="cont">
+        <div class="cont"><p onmouseover="myOverFunction()" onmouseleave="myleaverFunction()" id="demo3" class="text">Nanjing school of aerospace and engineering sciences </p><img class="banner " src="../static/Screenshot%20(168).png" alt="" ></div>
+
+    </div>
+        <div class="col">
+        <div class="cont"><img class="banner " src="../static/Screenshot%20(168).png" alt="" ></div>
+
+    </div>
+</div>
+
+<script>
+    function myOverFunction() {
+  document.getElementById("demo3").style.overflow = "visible";
+  document.getElementById("demo3").style.padding = "5px";
+  document.getElementById("demo3").style.zIndex = "5px";
+  document.getElementById("demo3").style.position = "relative";
+  // `element` is the element you want to wrap
+var parent = element.parentNode;
+var wrapper = document.createElement('div');
+
+// set the wrapper as child (instead of the element)
+parent.replaceChild(wrapper, element);
+// set element as child of wrapper
+wrapper.appendChild(element);
+
+}
+function myleaverFunction() {
+  document.getElementById("demo3").style.overflow = "hidden"
+
+
+
+
+
+}
+</script>
 </body>
+
 </html>

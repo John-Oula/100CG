@@ -983,4 +983,28 @@ font-family: Josefin Sans,sans-serif;
 .errors{
     font-size: 10px;
     color: red;
+    width: 229px;
+    height: 515px;
+}
+
+img.banner{
+
+    max-width: 100%;
+    height: auto;
+}
+
+.cont{
+    width: 229px;
+    height: 515px;
+}
+
+.text{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: inherit;
+    overflow: hidden;
+}
+
+.text :hover{
+    overflow: visible;
 }

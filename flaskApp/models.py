@@ -4,6 +4,7 @@ from flask_login import UserMixin
 from flaskApp import login_manager, db
 
 
+
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 import psycopg2
 

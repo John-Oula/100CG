@@ -86,7 +86,7 @@ pandas==0.24.2
 pbr==5.4.4
 peewee==3.9.2
 pexpect==4.8.0
-Pillow==6.2.1
+Pillow==6.2.2
 pluggy==0.13.1
 prettytable==0.7.2
 property-manager==2.3.1

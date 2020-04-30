@@ -1,14 +1,13 @@
-
 # from flask.ext.uploads import  UploadSet,configure_uploads,IMAGES
 
 
-
 from flaskApp.config import Config
-#mysql://root:@qwerty1234!@localhost/CHINAGUIDE
+# mysql://root:@qwerty1234!@localhost/CHINAGUIDE
 import psycopg2
 from flask import Flask
 
-def create_app(config_class = Config):
+
+def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(Config)
     bcrypt.init_app(app)
@@ -23,16 +22,14 @@ def create_app(config_class = Config):
     app.register_blueprint(main)
 
     return app
+
+
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 from flask_mail import Mail
-bcrypt= Bcrypt()
-mail= Mail()
-db= SQLAlchemy()
+
+bcrypt = Bcrypt()
+mail = Mail()
+db = SQLAlchemy()
 login_manager = LoginManager()
-
-
-
-
-

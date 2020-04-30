@@ -1,14 +1,15 @@
 import unittest
 
-from flask import current_app
+from flask import current_app,app
 
+from flaskApp import create_app
 from flaskApp.models import User, Post, Lesson, db, Comment, Upload
 import psycopg2
 
 class UserModelCase(unittest.TestCase):
     def setUp(self):
         current_app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:@qwerty1234!@localhost/postgres'
-        db.drop_all()
+        db.drop_all(app=create_app())
 
 
     def test_functions(self):

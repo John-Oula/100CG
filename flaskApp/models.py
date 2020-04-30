@@ -1,9 +1,7 @@
 from flask import current_app
 import datetime
 from flask_login import UserMixin
-from flaskApp import login_manager, db
-
-
+from flaskApp import login_manager, db, create_app
 
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 import psycopg2

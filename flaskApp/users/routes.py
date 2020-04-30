@@ -540,7 +540,7 @@ def reset_request():
     form = Request_reset(request.form)
     if  request.method == 'POST':
         user = User.query.filter_by(email = form.email.data).first()
-        send_reset_email(user)
+        #send_reset_email(user)
         flash('An email has been sent to your mail')
     return render_template('request_reset.html', form =form)
 
@@ -568,10 +568,10 @@ def reverse_admin():
     user.role = 0
     db.session.commit()
 
-def send_reset_email(user):
-    token = user.get_reset_token()
-    msg = Message('Password Reset Requset',
-                  sender='cjohn222.jc@gmail.com',
-                  recipients=[user.email])
-    msg.body = f'''THIS IS A TEST{url_for('users.reset_token',token=token,_external=True)}'''
-    mail.send(msg)
+#def send_reset_email(user):
+#    token = user.get_reset_token()
+#    msg = Message('Password Reset Requset',
+#                  sender='cjohn222.jc@gmail.com',
+#                  recipients=[user.email])
+#    msg.body = f'''THIS IS A TEST{url_for('users.reset_token',token=token,_external=True)}'''
+#    mail.send(msg)

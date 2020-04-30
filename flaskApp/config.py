@@ -6,7 +6,7 @@ with open('/etc/flaskApp.json') as config_file:
 
 UPLOAD_FOLDER = "/videos"
 class Config:
-    SECRET_KEY = config.get('SECRE_KEYT')
+    SECRET_KEY = config.get('SECRET_KEY')
     POSTS_PER_PAGE= 3
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_DATABASE_URI = config.get('SQLALCHEMY_DATABASE_URI')

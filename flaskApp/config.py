@@ -1,12 +1,15 @@
 import os
+import json
 
+with open('/etc/flaskApp.json') as config_file:
+	config = json.load(config_file)
 
 UPLOAD_FOLDER = "/videos"
 class Config:
-    SECRET_KEY = os.environ.get('SECRET')
+    SECRET_KEY = config.get('SECRE_KEYT')
     POSTS_PER_PAGE= 3
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    SQLALCHEMY_DATABASE_URI = os.environ.get('db_uri')
+    SQLALCHEMY_DATABASE_URI = config.get('SQLALCHEMY_DATABASE_URI')
     MAIL_SERVER = 'smtp.gmail.com'
     MAIL_PORT= 465
     MAIL_USERNAME = 'cjohn222.jc@gmail.com'

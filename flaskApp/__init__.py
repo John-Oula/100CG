@@ -5,7 +5,8 @@ from flaskApp.config import Config
 # mysql://root:@qwerty1234!@localhost/CHINAGUIDE
 import psycopg2
 from flask import Flask
-
+from flask_migrate import Migrate,MigrateCommand
+from flask_script import Manager
 
 def create_app(config_class=Config):
     app = Flask(__name__)
@@ -14,6 +15,8 @@ def create_app(config_class=Config):
     mail.init_app(app)
     db.init_app(app)
     login_manager.init_app(app)
+    migrate.init_app(app, db)
+
     from flaskApp.users.routes import users
     from flaskApp.posts.routes import posts
     from flaskApp.main.routes import main
@@ -33,3 +36,7 @@ bcrypt = Bcrypt()
 mail = Mail()
 db = SQLAlchemy()
 login_manager = LoginManager()
+
+migrate = Migrate()
+#manager = Manager(app)
+#manager.add_command('db', MigrateCommand)

@@ -15,13 +15,7 @@ def home():
 @main.route('/profile')
 @login_required
 def profile():
-#   if session['loggedin']:
-#       mycursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-#       mycursor.execute(" SELECT * FROM user WHERE   userid= %s ", [session['id']])
-#       account = mycursor.fetchone()
 
-
-#       return render_template('USER_BASE.html',account=account)
 
     flash('Please verify your account')
     return render_template('USER_BASE.html')

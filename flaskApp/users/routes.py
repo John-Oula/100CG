@@ -7,9 +7,9 @@ from os import urandom
 from flask import Blueprint, send_from_directory, render_template, flash, request, redirect, url_for, session
 
 from flask_login import login_user, current_user, login_required, logout_user
-from flask_mail import Message
 
-from flaskApp import mail,bcrypt
+
+from flaskApp import bcrypt
 from flaskApp.models import Upload, Post, User, db, followers, Lesson, Comment
 from flaskApp.posts.forms import Lesson_form, Upload_form, Session_form
 from flaskApp.users.forms import Signup_form, Login_form, UpdateAccount, Verify_form, Request_reset, Reset_password

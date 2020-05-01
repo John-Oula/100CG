@@ -1,12 +1,11 @@
-# from flask.ext.uploads import  UploadSet,configure_uploads,IMAGES
 
 
 from flaskApp.config import Config
-# mysql://root:@qwerty1234!@localhost/CHINAGUIDE
+
 import psycopg2
 from flask import Flask
-from flask_migrate import Migrate,MigrateCommand
-from flask_script import Manager
+from flask_migrate import Migrate
+
 
 def create_app(config_class=Config):
     app = Flask(__name__)
@@ -38,5 +37,4 @@ db = SQLAlchemy()
 login_manager = LoginManager()
 
 migrate = Migrate()
-#manager = Manager(app)
-#manager.add_command('db', MigrateCommand)
+
